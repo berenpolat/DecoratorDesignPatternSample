@@ -1,0 +1,22 @@
+namespace DefaultNamespace
+{
+    public abstract class WeaponDecorator: IWeapon
+
+    {
+
+        protected IWeapon weapon;
+
+        public WeaponDecorator(IWeapon weapon)
+        {
+            this.weapon = weapon;
+        }
+        
+        
+        public virtual void Fire()
+        {
+            weapon.Fire();
+        }
+    }
+}
+
+//This class is also derived from IWeapon interface. This class implements the decorations into the gun and fires it.
