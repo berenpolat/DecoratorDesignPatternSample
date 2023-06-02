@@ -1,0 +1,14 @@
+using UnityEngine;
+
+namespace DefaultNamespace
+{
+    public class BasicWeapon : MonoBehaviour, IWeapon
+    {
+        public void Fire()
+        {
+            Debug.Log("Weapon is firing");
+        }
+    }
+}
+
+//A class that has been derived from IWeapon interface
