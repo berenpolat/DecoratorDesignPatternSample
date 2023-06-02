@@ -1,0 +1,19 @@
+using UnityEngine;
+
+namespace DefaultNamespace
+{
+    public class Silencer : WeaponDecorator
+    {
+        public Silencer(IWeapon weapon) : base(weapon)
+        {
+        }
+
+        public override void Fire()
+        {
+            base.Fire();
+            Debug.Log("Attaching silencer");
+        }
+    }
+}
+
+//This is derived from WeaponDecorator class. Its a feature for the weapon.
