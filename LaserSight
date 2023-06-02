@@ -1,0 +1,19 @@
+using UnityEngine;
+
+namespace DefaultNamespace
+{
+    public class LaserSight : WeaponDecorator
+    {
+        public LaserSight(IWeapon weapon) : base(weapon)
+        {
+        }
+
+        public override void Fire()
+        {
+            base.Fire();
+            Debug.Log("Activating laser sight");
+        }
+    }
+}
+
+//This class is derived from the abstract weaponDecorator class. This is a feature of the gun.
