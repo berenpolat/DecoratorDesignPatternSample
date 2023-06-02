@@ -1,0 +1,32 @@
+using System;
+using UnityEngine;
+
+namespace DefaultNamespace
+{
+    public class GameManager : MonoBehaviour
+    {
+        IWeapon weapon = new BasicWeapon();
+
+        private void Start()
+        {
+           
+                weapon = new LaserSight(weapon);
+                Debug.Log("Activating laser sight");
+            
+                weapon = new Silencer(weapon);
+                Debug.Log("Attaching silencer");
+           
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                weapon.Fire();
+            }
+        }
+    }
+}
+
+//In this gameManager we are rebuilding the weapon.
+
